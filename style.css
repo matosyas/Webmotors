@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 65.5%;
+}
+
+:root{
+    --cor-principal: #d117ff;
+    --cor-branca: #ffffff;
+    --cor-escura: #340474;
+}
+
+.super-topo .super-topo-box{
+    width: 100%;
+    background: var(--cor-principal);
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--cor-branca);
+    padding: 1rem 0;
+    background: var(--cor-escura);
+    clip-path: polygon(8% 0%, 92% 0%, 96% 100%, 5% 100%);
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo .col-1{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-branca);
+    margin-left: 13rem;  
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo .col-1 span{
+    font-size: 1.1rem;
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo .col-1 span i{
+    color: var(--cor-principal);
+    padding-right: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo .col-2{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    color: var(--cor-branca0);
+    margin-right: 13rem;
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo .col-2 a i{
+    color: var(--cor-branca);
+    font-size: 1.1rem;
+    transition: 0.4s;
+}
+
+.super-topo .super-topo-box .super-topo-box-corpo .col-2 a:hover{
+    color: var(--cor-principal);
+}
+
+@media(max-width:1150px){
+    .super-topo .super-topo-box .super-topo-box-corpo .col-1{
+        margin-left: 8rem;
+    }
+
+    .super-topo .super-topo-box .super-topo-box-corpo .col-2{
+        margin-right: 8rem;
+    }
+}
+
+@media(max-width:991px){
+    .super-topo{
+        display: none;
+    }
+}
+
+.topo-menu-site{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position:sticky;
+    left:0;
+    top:0;
+    padding: 0.5rem 9.5%;
+    background: var(--cor-branca);
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5),
+    0 0 10px rgba(190, 190, 190, 0.5);
+    z-index: 111;
+    transition: 0.4s ease;
+}
+
+.topo-menu-site.sticky{
+    padding: 0 9.5%;
+}
+
+.topo-menu-site .logo img{
+    width: 80px;
+}
+
+.topo-menu-site nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+nav .menuSite ul  li{
+    padding: 2.5rem 0.5rem;
+}
+
+nav .menuSite .menuLinks{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav .menuSite .menuLinks li a{
+    position: relative;
+    color: var(--cor-escura);
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+nav .menuAnunciar{
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+nav .menuAnunciar i{
+    font-size: 1.9rem;
+    color: var(--cor-escura);
+    cursor: pointer;
+}
+
+nav .menuAnunciar .addBtn{
+    position: relative;
+    background: var(--cor-principal);
+    font-size: 1.6rem;
+    padding: 1.2rem 1.5rem;
+    color: var(--cor-branca);
+    border-radius: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+nav .menuAnunciar .addBtn:hover{
+    background: var(--cor-escura);
+    color: var(--cor-branca);
+}
+
+nav .menuAnunciar.addBtn i,
+nav .menuAnunciar.addBtn i:hover{
+    color: var(--cor-branca);
+    padding-right: 0.5rem;
+}
+
+#menuBtn{
+    font-size: 3.5rem;
+}
+
+nav .menuAnunciar i:hover{
+    color: var(--cor-principal);
+}
+
+nav .menuSite ul li a:hover,
+nav .menuSite ul li a.active{
+    color: var(--cor-principal);
+}
+
+nav .menuSite ul li .menuSub{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    position: absolute;
+    top: 7rem;
+    text-align: justify;
+    width: 180px;
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5);
+    padding: 1rem 0 0;
+    display: none;
+}
+
+nav .menuSite ul li{
+    transition: 0.4s ease;    
+}
+
+nav .menuSite ul li:hover .menuSub{
+    display: flex;
+}
+
+nav .menuSite ul li .menuSub li{
+    border-bottom: 1px solid rgba(190, 190, 190, 0.5);
+    padding: 0.5rem 0 1rem 1rem;
+    z-index: 100;
+    overflow: hidden;
+}
+
+nav .menuSite ul li .menuSub li a{
+    font-size: 1.2rem;
+    transition: 0.4s ease;
+}
+
+nav .menuSite ul li .menuSub li a:hover{
+    font-size: 1.3rem;
+    padding-left: 0.5rem;
+}
+
+.menuSub li .menuSub-dois{
+    position: absolute;
+    left: 182px;
+    width: 180px;
+    display: flex;
+    flex-direction: column;
+    margin-top: -3rem;
+    align-items: left;
+    text-align: justify;
+    padding: 1rem 0 0;
+    background-color: var(--cor-branca);
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5);
+    z-index: 111;
+    overflow: hidden;
+    display: none;
+}
+
+.menuSub li:hover .menuSub-dois{
+    display: flex;
+}
+
+.menuSub li .setaBaixo{
+    position: absolute;
+    left: 150px;
+    top: 5px;
+    color: var(--cor-escura);
+}
+
+.menuSub li:hover .setaBaixo{
+    color: var(--cor-principal);
+}
