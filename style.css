@@ -20,6 +20,7 @@ html{
     --cor-principal: #d117ff;
     --cor-branca: #ffffff;
     --cor-escura: #340474;
+    --cor-bg-busca: #f2f2f2;
 }
 
 .super-topo .super-topo-box{
@@ -371,3 +372,82 @@ nav .menuSite ul li .menuSub li a:hover{
 {
     font-size: 2rem;
 }
+
+.busca-site{
+    position: relative;
+    background: var(--cor-bg-busca);
+    padding: 0 16rem;
+}
+
+.busca-site .filtro{
+    max-width: 1200px;
+    width: 100%;
+    padding: 2.5rem;
+    position: absolute;
+    top:-7rem;
+    z-index: 111;
+    background: var(--cor-branca);
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(190, 190, 190, 0.5),
+    0 0 10px rgba(190, 190, 190, 0.5);
+    overflow: hidden;
+}
+
+.filtro .filtro-linha{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.filtro h3{
+    font-size: 2.7rem;
+    font-weight: 500;
+    color: var(--cor-escura);
+    letter-spacing: 1px;
+    padding-bottom: 2rem;
+}
+
+.filtro .filtro-linha h4{
+    font-size: 1.7rem;
+    color: var(--cor-escura);
+    padding-bottom: 1.5rem;
+}
+
+.filtro .filtro-linha select{
+    font-size: 1.5rem;
+    font-weight: 500;
+    width: 200px;
+    height: 45px;
+    border: 1px solid var(--cor-escura);
+    padding: 0 1rem;
+    color: var(--cor-escura);
+    border-radius: 5px;
+}
+
+.filtro .filtro-linha select option{
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--cor-escura);
+}
+
+.busca-site .busca-site-btn button{
+    font-size: 1.5rem;
+    background-color: var(--cor-principal);
+    color: var(--cor-branca);
+    padding: 1.3rem 2rem;
+    margin-top: 4rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: 0.5s ease;
+}
+
+
+.busca-site .busca-site-btn button i{
+    padding-right: 0.5rem;
+}
+
+
+.busca-site .busca-site-btn button:hover{
+    background-color: var(--cor-escura);
+}
+
